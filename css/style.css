@@ -840,6 +840,52 @@ a[data-type='lightbox']:hover img {
     margin-bottom: 8px;
   }
 }
+
+<style>
+
+    #sf-menu, #sf-menu li {
+
+        margin: 0;
+
+        padding: 0;
+
+    }
+
+    #sf-menu li{
+
+        display:inline-block;
+
+        text-align: center;
+
+        width: 17%; /* задаем размер пункта можно в пикселях*/
+
+    }
+
+    #sf-menu a {
+
+        display: block;
+
+        padding: 5px 15px;
+
+        color: #fff;
+
+        font-size:100%;
+
+        text-decoration: none;
+
+        background: #03658e;
+
+        margin-right: 5px; /* добавляем отступы между пунктами */
+
+    }
+
+    #sf-menu a:hover {
+
+        background: #8AB8CC;
+
+    }
+
+</style>
 /*========================================================
                     FOOTER styles
 =========================================================*/
