@@ -933,4 +933,7 @@ a[data-type='lightbox']:hover img {
     display: none !important;
   }
 }
+b {
+font-weight:bold;
+}
 /*Core variables and mixins*/
