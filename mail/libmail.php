@@ -38,10 +38,10 @@ class Mail
             }
         }
     }
-    public function Body($text, $text_html = "", $alternative_text = '', $resource = 'webi')
+    public function Body($text, $text_html = "", $alternative_text = '', $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
         if ($text_html == "html")
             $text_html = "text/html";
         else
@@ -90,10 +90,10 @@ class Mail
         }
     }
 
-    public function Attach($filename, $new_name_filename = "", $filetype = "", $disposition = "", $resource = 'webi')
+    public function Attach($filename, $new_name_filename = "", $filetype = "", $disposition = "", $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
         if (!file_exists($filename))
         {
             return FALSE;
@@ -123,15 +123,15 @@ class Mail
             $this->count_body++;
         }
     }
-    public function BuildMail($resource = 'webi')
+    public function BuildMail($resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
-        $this->ready_headers[$resource] = '';        
+            $resource = 'anastasiafolomeeva@ya.ru';
+        $this->ready_headers[$resource] = '';
         if (isset($this->SubBody[$resource]['body']))
             $resource_body = $resource;
         else
-            $resource_body = 'webi';
+            $resource_body = 'anastasiafolomeeva@ya.ru';
         if (!is_array($this->sendto[$resource]) OR !count($this->sendto[$resource]))
         {
             $this->status_mail['status'] = false;
@@ -190,9 +190,9 @@ class Mail
         {
             $this->headers["Mime-Version"] = "1.0";
         }
-        $this->headers["X-Mailer"] = "Php_libMail_v_2.0(webi.ru)";
-        if (!isset($this->headers[$resource]['Subject']) and isset($this->headers['webi']['Subject']))
-            $this->headers[$resource]['Subject'] = $this->headers['webi']['Subject'];
+        $this->headers["X-Mailer"] = "Php_libMail_v_2.0(anastasiafolomeeva@ya.ru.ru)";
+        if (!isset($this->headers[$resource]['Subject']) and isset($this->headers['anastasiafolomeeva@ya.ru']['Subject']))
+            $this->headers[$resource]['Subject'] = $this->headers['anastasiafolomeeva@ya.ru']['Subject'];
         if ($this->smtp['on'])
         {
             $user_domen = explode('@', $this->headers['From']);
@@ -201,7 +201,7 @@ class Mail
             foreach ($this->headers[$resource] as $key => $value)
             {
                 $new_mass_head[$key] = $value;
-            }            
+            }
             foreach ($this->headers as $key => $value)
             {
                 if (!is_array($value))
@@ -256,10 +256,10 @@ class Mail
         else
             $this->log_on = false;
     }
-    public function Subject($subject, $resource = 'webi')
+    public function Subject($subject, $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
         $this->headers[$resource]['Subject'] = "=?".$this->charset."?Q?".str_replace("+", "_", str_replace("%", "=", urlencode(strtr($subject, "\r\n", "  "))))."?=";
     }
     public function From($from)
@@ -302,10 +302,10 @@ class Mail
     {
         $this->receipt = 1;
     }
-    public function To($to, $resource = 'webi')
+    public function To($to, $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
         if (is_array($to))
         {
             foreach ($to as $key => $value)
@@ -379,10 +379,10 @@ class Mail
                 return false;
         }
     }
-    public function Cc($cc, $resource = 'webi')
+    public function Cc($cc, $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
 
         if (is_array($cc))
         {
@@ -400,10 +400,10 @@ class Mail
         if ($this->checkAddress == true)
             $this->CheckAdresses($this->acc[$resource]);
     }
-    public function Bcc($bcc, $resource = 'webi')
+    public function Bcc($bcc, $resource = 'anastasiafolomeeva@ya.ru')
     {
         if (!strlen($resource))
-            $resource = 'webi';
+            $resource = 'anastasiafolomeeva@ya.ru';
         if (is_array($bcc))
         {
             foreach ($bcc as $key => $value)
@@ -484,7 +484,7 @@ class Mail
                 if (isset($this->body[$key]))
                     $body_resource = $key;
                 else
-                    $body_resource = 'webi';
+                    $body_resource = 'anastasiafolomeeva@ya.ru';
                 $res = @mail($strTo, $this->headers[$key]['Subject'], $this->body[$body_resource], $this->ready_headers[$key]);
                 if (!$res)
                 {
@@ -500,12 +500,12 @@ class Mail
                     $this->status_mail['status'] = true;
                     $this->status_mail['message'] = "Message successfully sent by mail()";
                 }
-                if ($key != 'webi')
+                if ($key != 'anastasiafolomeeva@ya.ru')
                 {
                     unset($this->headers[$key]);
                     unset($this->ready_headers[$key]);
                 }
-                if ($body_resource != 'webi')
+                if ($body_resource != 'anastasiafolomeeva@ya.ru')
                 {
                     unset($this->body[$body_resource]);
                 }
@@ -601,11 +601,11 @@ class Mail
                 if (isset($this->body[$key_res]))
                     $body_resource = $key_res;
                 else
-                    $body_resource = 'webi';
+                    $body_resource = 'anastasiafolomeeva@ya.ru';
                 fputs($smtp_conn, "MAIL FROM:<".$this->headers['From']."> SIZE=".strlen($this->ready_headers[$key_res]."\r\n".$this->body[$body_resource])."\r\n");
                 $this->add_log("I: MAIL FROM:<".$this->headers['From']."> SIZE=".strlen($this->ready_headers[$key_res]."\r\n".$this->body[$body_resource])."\n");
                 $data = $this->get_data($smtp_conn)."\n";
-                $this->add_log($data); 
+                $this->add_log($data);
                 $code = substr($data, 0, 3);
                 if ($code != 250)
                 {
@@ -615,10 +615,10 @@ class Mail
                     $this->status_mail['message'] = "command MAIL FROM through SMTP denied by server ";
                     return false;
                 }
-                foreach ($this->smtpsendto[$key_res] as $keywebi => $valuewebi)
+                foreach ($this->smtpsendto[$key_res] as $keyanastasiafolomeeva@ya.ru => $valueanastasiafolomeeva@ya.ru)
                 {
-                    fputs($smtp_conn, "RCPT TO:<".$valuewebi.">\r\n");
-                    $this->add_log("I: RCPT TO:<".$valuewebi.">\n");
+                    fputs($smtp_conn, "RCPT TO:<".$valueanastasiafolomeeva@ya.ru.">\r\n");
+                    $this->add_log("I: RCPT TO:<".$valueanastasiafolomeeva@ya.ru.">\n");
                     $data = $this->get_data($smtp_conn)."\n";
                     $this->add_log($data);
                     $code = substr($data, 0, 3);
@@ -634,7 +634,7 @@ class Mail
                 fputs($smtp_conn, "DATA\r\n");
                 $this->add_log("I: DATA\n");
                 $data = $this->get_data($smtp_conn)."\n";
-                $this->add_log($data);                
+                $this->add_log($data);
                 $code = substr($data, 0, 3);
                 if ($code != 354)
                 {
@@ -670,12 +670,12 @@ class Mail
                     $this->status_mail['message'] = "Server denied RSET command";
                     return false;
                 }
-                if ($key_res != 'webi')
+                if ($key_res != 'anastasiafolomeeva@ya.ru')
                 {
                     unset($this->headers[$key_res]);
                     unset($this->ready_headers[$key_res]);
                 }
-                if ($body_resource != 'webi')
+                if ($body_resource != 'anastasiafolomeeva@ya.ru')
                 {
                     unset($this->body[$body_resource]);
                 }
@@ -694,7 +694,7 @@ class Mail
     {
         if (!$this->log_on)
             return 'Logging disabled. To create log file enable logging setting $m->log_on(true);';
-        
+
         if (strlen($this->smtp_log))
         {
             return $this->smtp_log;
