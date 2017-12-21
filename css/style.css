@@ -1,14 +1,15 @@
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import "animate.css";
-@import url(http://fonts.googleapis.com/css?family=Marvel);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic');
+@import url('http://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic');
 /*========================================================
                     Main layout styles
 =========================================================*/
+
 body {
   background: #129894;
   color: #363535;
-  font: 300 18px/36px 'Open Sans', sans-serif;
+  font: 300 18px/36px 'caveat', sans-serif;
 }
 .ic {
   border:0;
@@ -48,28 +49,28 @@ img {
 }
 /*============  Text  =============*/
 .text_1 {
-  font: 300 68px/60px 'Open Sans', sans-serif;
+  font: 300 68px/60px 'caveat', sans-serif;
 }
 .text_2 {
-  font: 600 24px/30px 'Open Sans', sans-serif;
+  font: 600 24px/30px 'caveat', sans-serif;
 }
 .text_3 {
-  font: 300 18px/24px 'Open Sans', sans-serif;
+  font: 300 18px/24px 'caveat', sans-serif;
 }
 .text_4 {
-  font: 400 14px/16px 'Open Sans', sans-serif;
+  font: 400 14px/16px 'caveat', sans-serif;
 }
 .text_5 {
-  font: 300 14px/20px 'Open Sans', sans-serif;
+  font: 300 14px/20px 'caveat', sans-serif;
 }
 .text_6 {
-  font: 400 18px/26px 'Open Sans', sans-serif;
+  font: 400 18px/26px 'caveat', sans-serif;
 }
 .text_7 {
-  font: 400 18px/20px 'Open Sans', sans-serif;
+  font: 400 18px/20px 'caveat', sans-serif;
 }
 .text_8 {
-  font: 400 14px/20px 'Open Sans', sans-serif;
+  font: 400 14px/20px 'caveat', sans-serif;
 }
 /*============  Colors  =============*/
 .color_1 {
@@ -164,7 +165,7 @@ img {
 .sf-menu > li {
   position: relative;
   float: left;
-  font: 400 22px/22px 'Marvel', sans-serif;
+  font: 400 22px/22px 'caveat', sans-serif;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 1.1px;
@@ -263,7 +264,7 @@ img {
     border-radius: 0;
     -webkit-appearance: none;
     outline: none;
-    font: normal 14px 'Open Sans', sans-serif;
+    font: normal 14px 'caveat', sans-serif;
     cursor: pointer;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -294,9 +295,15 @@ img {
   overflow: hidden;
 }
 /*============  Headers  =============*/
+.box1 {
+  max-width: 700px;
+  min-width: 1px;
+  max-height: 1px;
+  min-height: 1px
+}
 .header_1 {
   text-align: center;
-  font: 600 48px/60px 'Open Sans', sans-serif;
+  font: 600 48px/60px 'caveat', sans-serif;
 }
 .header_1.indent_1 {
   padding-bottom: 56px;
@@ -317,7 +324,7 @@ img {
   }
 }
 .header_2 {
-  font: 600 36px/30px 'Open Sans', sans-serif;
+  font: 600 36px/30px 'caveat', sans-serif;
 }
 .header_2.indent_1 {
   padding-bottom: 30px;
@@ -423,7 +430,7 @@ img {
 /*============  Butttons  =============*/
 .btn_1 {
   display: inline-block;
-  font: 400 30px/30px 'Marvel', sans-serif;
+  font: 400 30px/30px 'caveat', sans-serif;
   padding: 15px 51px 16px;
   letter-spacing: 1.5px;
   color: #000000;
@@ -437,7 +444,7 @@ img {
 .btn_2 {
   display: inline-block;
   padding: 4px 20px 3px;
-  font: 400 24px/30px 'Marvel', sans-serif;
+  font: 400 24px/30px 'caveat', sans-serif;
   color: #413d3d;
   background: #f1f045;
 }
@@ -449,7 +456,7 @@ img {
 .btn_3 {
   display: inline-block;
   padding: 4px 34px 3px 33px;
-  font: 400 24px/30px 'Marvel', sans-serif;
+  font: 400 24px/30px 'caveat', sans-serif;
   color: #413d3d;
   background: #f1f045;
 }
@@ -612,7 +619,7 @@ img {
   text-align: center;
   color: #ffffff;
   background: #129894;
-  font: 700 36px/48px 'Open Sans', sans-serif;
+  font: 700 36px/48px 'caveat', sans-serif;
 }
 .box_5 .text_2 + .text_3 {
   padding-top: 24px;
@@ -936,4 +943,14 @@ a[data-type='lightbox']:hover img {
 b {
 font-weight:bold;
 }
+<head>
+  <meta charset="utf-8">
+  <title>height</title>
+  <style>
+   .layer {
+    height: 500px; /* Высота блока */
+   }
+  </style>
+ </head>
+ 
 /*Core variables and mixins*/

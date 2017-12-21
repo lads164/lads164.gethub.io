@@ -1,26 +1,26 @@
 /**
- * jQuery Mobile Menu 
+ * jQuery Mobile Menu
  * Turn unordered list menu into dropdown select menu
  * version 1.1(27-JULY-2013)
- * 
+ *
  * Built on top of the jQuery library
  *   http://jquery.com
- * 
+ *
  * Documentation
  *   http://github.com/mambows/mobilemenu
  */
 (function($){
 $.fn.mobileMenu = function(options) {
-  
+
   var defaults = {
-      defaultText: 'Navigate to...',
+
       className: 'select-menu',
       subMenuClass: 'sub-menu',
       subMenuDash: '&ndash;'
     },
     settings = $.extend( defaults, options ),
     el = $(this);
-  
+
   this.each(function(){
     var $el = $(this),
       $select_menu;
@@ -33,11 +33,7 @@ $.fn.mobileMenu = function(options) {
       'class' : settings.className + ' ' + el.get(0).className
     }).insertAfter( $el );
 
-    // Create default option
-    $('<option />', {
-      "value"   : '#',
-      "text"    : settings.defaultText
-    }).appendTo( $select_menu );
+  
 
     // Create select option from menu
     $el.find('a').each(function(){
@@ -46,7 +42,7 @@ $.fn.mobileMenu = function(options) {
         optSub  = $this.parents( '.' + settings.subMenuClass ),
         len   = optSub.length,
         dash;
-      
+
       // if menu has sub menu
       if( $this.parents('ul').hasClass( settings.subMenuClass ) ) {
         dash = Array( len+1 ).join( settings.subMenuDash );
