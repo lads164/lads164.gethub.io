@@ -42,8 +42,8 @@ include('js/jquery.simplr.smoothscroll.min.js');
 $(function () {
     if ($('html').hasClass('desktop')) {
         $.srSmoothscroll({
-            step: 150,
-            speed: 800
+            step: 15,
+            speed: 36
         });
     }
 });

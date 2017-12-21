@@ -3,27 +3,27 @@
 
  		var defaults = {
 			text: '',
-			min: 500,			
-			scrollSpeed: 800,
+			min: 500,
+			scrollSpeed: 100,
   			containerID: 'toTop',
   			containerClass: 'fa fa-chevron-up',
 			easingType: 'linear'
-					
+
  		};
 
  		var settings = $.extend(defaults, options);
 		var containerIDhash = '#' + settings.containerID;
 		var containerHoverIDHash = '#'+settings.containerHoverID;
-			
-		$('body').append('<a href="#" id="'+settings.containerID+'" class="'+settings.containerClass+'" >'+settings.text+'</a>');		
-		
-		$(containerIDhash).hide().click(function(){			
+
+		$('body').append('<a href="#" id="'+settings.containerID+'" class="'+settings.containerClass+'" >'+settings.text+'</a>');
+
+		$(containerIDhash).hide().click(function(){
 			$('html, body').stop().animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
 			$('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
 			return false;
 		})
-		
-								
+
+
 		$(window).scroll(function() {
 			var sd = $(window).scrollTop();
 			if(typeof document.body.style.maxHeight === "undefined") {
@@ -32,9 +32,9 @@
 					'top': $(window).scrollTop() + $(window).height() - 50
 				});
 			}
-			if ( sd > settings.min ) 
+			if ( sd > settings.min )
 				$(containerIDhash).stop(true,true).fadeIn(600);
-			else 
+			else
 				$(containerIDhash).fadeOut(800);
 		});
 };
