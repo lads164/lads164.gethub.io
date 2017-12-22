@@ -52,10 +52,10 @@ img {
   font: 300 68px/60px 'caveat', sans-serif;
 }
 .text_2 {
-  font: 600 24px/30px 'caveat', sans-serif;
+  font: 600 28px/40px 'caveat', sans-serif;
 }
 .text_3 {
-  font: 300 18px/24px 'caveat', sans-serif;
+  font: 300 20px/24px 'caveat', sans-serif;
 }
 .text_4 {
   font: 400 14px/16px 'caveat', sans-serif;
@@ -319,12 +319,12 @@ img {
 }
 @media (max-width: 767px) {
   .header_1 {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 42px;
   }
 }
 .header_2 {
-  font: 600 36px/30px 'caveat', sans-serif;
+  font: 600 40px/30px 'caveat', sans-serif;
 }
 .header_2.indent_1 {
   padding-bottom: 30px;
@@ -333,7 +333,7 @@ img {
   padding-bottom: 32px;
 }
 .header_2.indent_3 {
-  padding-bottom: 81px;
+  padding-bottom: 30px;
 }
 .header_2.indent_4 {
   padding-bottom: 43px;
@@ -346,13 +346,13 @@ img {
   padding-top: 50px;
 }
 .wrap_2 {
-  padding-top: 10px;
+  padding-top: 0px;
 }
 .wrap_3 {
-  padding-bottom: 34px;
+  padding-bottom: 0px;
 }
 .wrap_4 {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 .wrap_5 {
   padding-bottom: 30px;
@@ -373,7 +373,7 @@ img {
   padding-bottom: 44px;
 }
 .wrap_11 {
-  padding-top: 123px;
+  padding-top: 0px;
 }
 .wrap_12 {
   padding-bottom: 91px;
@@ -391,7 +391,7 @@ img {
   padding-top: 32px;
 }
 .wrap_17 {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .wrap_18 {
   padding-top: 117px;
@@ -408,13 +408,13 @@ img {
   .wrap_9,
   .wrap_1,
   .wrap_18 {
-    padding-top: 50px;
+    padding-top: 5px;
   }
   .wrap_12,
   .wrap_15,
   .wrap_5,
   .wrap_19 {
-    padding-bottom: 50px;
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 1199px) {
