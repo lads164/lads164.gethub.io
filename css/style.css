@@ -5,19 +5,7 @@
 /*========================================================
                     Main layout styles
 =========================================================*/
-body{
-	 background-color: #000000;
-   padding: 0px;
-   margin: 0px;
- }
 
-#gradient
-{
-  width: 100%;
-  height: 800px;
-  padding: 0px;
-  margin: 0px;
-}
 body {
   background: #129894;
   color: #363535;
