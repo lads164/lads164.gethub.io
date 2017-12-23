@@ -95,28 +95,32 @@
 Telephone: +8 404 404 404 8<br/>
 E-mail: <a href="#">anastasiafolomeeva@ya.ru</a>
 </p>
-<form id="myform" method="post">
-<label>Ваше имя</label>
-<input type="text" name="Ваше имя" />
-<label>Ваш отзыв или пожелание</label>
-<input type="text" name="message_html" />
-<br><br>
-<button>
-Отправить
-</button>
-</form>
-
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.."></script>
-
-<script type="text/javascript" src="googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E%3C/script%3E"></script>
-<script type="text/javascript">
-(function(){
-emailjs.init("user_qFTJgw6Aay7slcaMCdxQa");
-})();
-</script>
                             </address>
                         </div>
                     </div>
+
+      <form id="myform" method="post">
+      <label>Ваше имя</label>
+      <input type="text" name="from_name" />
+      <label>Почта для обратной связи</label>
+      <input type="text" name="reply_to" />
+      <label>Ваше сообщение</label>
+      <input type="text" name="message_html" />
+      <br><br>
+      <button>
+      Отправить
+      </button>
+      </form>
+
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script type="text/javascript">
+         (function(){
+            emailjs.init("user_FJsOsfr4h5IMGDJtngp9L");
+         })();
+      </script>
+
                     <div class="grid_6">
                         <div class="wrap_18">
                             <h2 class="header_2 indent_2">
