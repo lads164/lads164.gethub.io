@@ -174,7 +174,7 @@
 	var template_id = "template_5covS69g";
 
 	myform.find("button").text("Отправление...");
-	emailjs.sendForm(service_id,template_id,"myform")
+	emailjs.sendForm(default_service,template_5covS69g,"myform")
 	.then(function(){
 	alert("Отправлено!");
 	myform.find("button").text("Отправить");
