@@ -1,5 +1,5 @@
 ;(function () {
-	
+
 	'use strict';
 
 
@@ -39,7 +39,7 @@
 	var parallax = function() {
 		$(window).stellar({
 			horizontalScrolling: false,
-			hideDistantElements: false, 
+			hideDistantElements: false,
 			responsive: true
 
 		});
@@ -67,7 +67,7 @@
 		$('.animate-box').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -90,9 +90,9 @@
 							el.removeClass('item-animate');
 						},  k * 200, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '85%' } );
@@ -109,11 +109,11 @@
 	var counterWayPoint = function() {
 		if ($('#counter-animate').length > 0 ) {
 			$('#counter-animate').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
+					setTimeout( counter , 400);
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '90%' } );
 		}
@@ -127,10 +127,10 @@
 
 			if ($('body').hasClass('offcanvas')) {
 				$this.removeClass('active');
-				$('body').removeClass('offcanvas');	
+				$('body').removeClass('offcanvas');
 			} else {
 				$this.addClass('active');
-				$('body').addClass('offcanvas');	
+				$('body').addClass('offcanvas');
 			}
 		});
 
@@ -149,9 +149,9 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-fh5co-nav-toggle').removeClass('active');
-			
+
 	    	}
-	    	
+
 	    }
 		});
 
@@ -160,12 +160,31 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-fh5co-nav-toggle').removeClass('active');
-			
+
 	    	}
 		});
 
 	};
+	var myform = $("form#myform");
+	myform.submit(function(event){
+	event.preventDefault();
 
+	// Change to your service ID, or keep using the default service
+	var service_id = "default_service";
+	var template_id = "template_15cmQUOq";
+
+	myform.find("button").text("Отправление...");
+	emailjs.sendForm(service_id,template_id,"myform")
+	.then(function(){
+	alert("Отправлено!");
+	myform.find("button").text("Отправить");
+	}, function(err) {
+	alert("Ошибка!\r\n Response:\n " + JSON.stringify(err));
+	myform.find("button").text("Отправить");
+	});
+	return false;
+	});
+	
 	// Document on load.
 	$(function(){
 		fullHeight();

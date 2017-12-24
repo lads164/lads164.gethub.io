@@ -97,93 +97,9 @@ E-mail: <a href="#">anastasiafolomeeva@ya.ru</a>
                         </div>
                     </div>
 
-      <form id="myform" method="post">
-      <label>Ваше имя</label>
-      <input type="text" name="from_name" />
-      <label>Почта для обратной связи</label>
-      <input type="text" name="reply_to" />
-      <label>Ваше сообщение</label>
-      <input type="text" name="message_html" />
-      <br><br>
-      <button>
-      Отправить
-      </button>
-      </form>
 
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      <script type="text/javascript">
-         (function(){
-            emailjs.init("user_FJsOsfr4h5IMGDJtngp9L");
-         })();
-      </script>
 
-                    <div class="grid_6">
-                        <div class="wrap_18">
-                            <h2 class="header_2 indent_2">
-                                Contact Form
-                            </h2>
-                            <form id="contact-form">
-                                <div class="contact-form-loader"></div>
-                                <fieldset>
-                                    <div class="row">
-                                        <div class="grid_2">
-                                            <label class="name">
-                                                <input type="text" name="name" placeholder="Name:" value=""
-                                                       data-constraints="@Required @JustLetters"/>
-                                                <span class="empty-message">*This field is required.</span>
-                                                <span class="error-message">*This is not a valid name.</span>
-                                            </label>
-                                        </div>
-                                        <div class="grid_2">
-                                            <label class="email">
-                                                <input type="text" name="email" placeholder="E-mail:" value=""
-                                                       data-constraints="@Required @Email"/>
-                                                <span class="empty-message">*This field is required.</span>
-                                                <span class="error-message">*This is not a valid email.</span>
-                                            </label>
-                                        </div>
-                                        <div class="grid_2">
-                                            <label class="phone">
-                                                <input type="text" name="phone" placeholder="Phone:" value=""
-                                                       data-constraints="@JustNumbers"/>
-                                                <span class="empty-message">*This field is required.</span>
-                                                <span class="error-message">*This is not a valid phone.</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <label class="message">
-                                        <textarea name="message" placeholder="Message:"
-                                                  data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-                                        <span class="empty-message">*This field is required.</span>
-                                        <span class="error-message">*The message is too short.</span>
-                                    </label>
-                                    <div class="btn-wrap">
-                                        <a class="btn_3" href="#" data-type="reset">clear</a>
-                                        <a class="btn_3" href="#" data-type="submit">send</a>
-                                    </div>
-                                </fieldset>
-                                <div class="modal fade response-message">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title">Modal title</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                You message has been sent! We will be in touch soon.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="hypercomments_widget"></div>
         <script type="text/javascript">
         _hcwp = window._hcwp || [];
@@ -199,8 +115,37 @@ E-mail: <a href="#">anastasiafolomeeva@ya.ru</a>
         })();
         </script>
 
+
+        <div class="grid_6">
+          <div class="wrap_18">
+            <h2 class="header_2 indent_2">
+              Отзывы и пожелания
+            </h2>
+
+        <form id="myform" method="post">
+        <label>Ваше имя</label>
+        <input type="text" name="Ваше имя" />
+        <label>Ваш отзыв или пожелание</label>
+        <input type="text" name="message_html" />
+        <br><br>
+        <button>
+        Отправить
+        </button>
+        </form>
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.."></script>
+
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init("user_qFTJgw6Aay7slcaMCdxQa");
+        })();
+        </script>
+
     </section>
 </div>
+
+
 <!--========================================================
                           FOOTER
 =========================================================-->

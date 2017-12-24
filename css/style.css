@@ -117,9 +117,10 @@ img {
 .put-left {
   float: left;
 }
-.put-right {
+  .put-right {
   float: right;
 }
+
 /*============  Page  =============*/
 .page {
   background: #ffffff;

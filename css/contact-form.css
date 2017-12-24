@@ -1,5 +1,40 @@
-/* Contact Form Basic Styles 
+/* Contact Form Basic Styles
 ========================================================*/
+body {
+font-family: arial;
+font-size: 19px;
+color: #666;
+}
+form {
+width: 500px;
+background: white;
+padding: 30px 25px;
+margin: auto;
+margin-top: 60px;
+box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+form input,
+form textarea {
+font: inherit;
+padding: 5px 5px;
+width: 100%;
+margin-top: 3px;
+margin-bottom: 15px;
+box-sizing: border-box;
+}
+form button {
+border: 1px solid rgba(0,0,0,0.2);
+padding: 8px 35px;
+font-size: 13px;
+background: #249f9c;
+color: white;
+}
+form label {
+color: #777;
+font-size: 15px;
+margin-bottom: 6px;
+display: block;
+}
 #contact-form {
   position: relative;
   padding-top: 8px;
@@ -23,7 +58,7 @@
 #contact-form fieldset {
   border: none;
 }
-/* Contact Form Placeholder Styles 
+/* Contact Form Placeholder Styles
 ========================================================*/
 #contact-form ._placeholder {
   width: 100% !important;
@@ -53,7 +88,7 @@
 #contact-form .file ._placeholder {
   display: none;
 }
-/* Contact Form Input 
+/* Contact Form Input
 ========================================================*/
 #contact-form input[type='text'] {
   width: 100%;
@@ -85,7 +120,7 @@
   padding-left: 37px;
   padding-right: 37px;
 }
-/* Contact Form Textarea 
+/* Contact Form Textarea
 ========================================================*/
 #contact-form textarea {
   width: 100%;
@@ -149,7 +184,7 @@
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-/* Contact Form Modal 
+/* Contact Form Modal
 ========================================================*/
 .modal-open {
   overflow: hidden;
@@ -245,7 +280,7 @@
     margin: 10px;
   }
 }
-/* Contact Form Close icon 
+/* Contact Form Close icon
 ========================================================*/
 .close {
   float: right;
