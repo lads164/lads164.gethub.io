@@ -166,24 +166,25 @@
 
 	};
 	var myform = $("form#myform");
-myform.submit(function(event){
+	myform.submit(function(event){
 	event.preventDefault();
 
-  // Change to your service ID, or keep using the default service
-  var service_id = "default_service";
-  var template_id = "template_5covS69g";
+	// Change to your service ID, or keep using the default service
+	var service_id = "default_service";
+	var template_id = "template_5covS69g";
 
-  myform.find("button").text("Sending...");
-  emailjs.sendForm(service_id,template_id,"myform")
-  	.then(function(){
-    	alert("Sent!");
-       myform.find("button").text("Send");
-    }, function(err) {
-       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("button").text("Send");
-    });
-  return false;
-});
+	myform.find("button").text("Отправление...");
+	emailjs.sendForm(service_id,template_id,"myform")
+	.then(function(){
+	alert("Отправлено!");
+	myform.find("button").text("Отправить");
+	}, function(err) {
+	alert("Что-то пошло не так!\r\n Response:\n " + JSON.stringify(err));
+	myform.find("button").text("Отправить");
+	});
+	return false;
+	});
+
 	// Document on load.
 	$(function(){
 		fullHeight();
