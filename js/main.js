@@ -179,12 +179,12 @@
 	alert("Отправлено!");
 	myform.find("button").text("Отправить");
 	}, function(err) {
-	alert("Ошибка!\r\n Response:\n " + JSON.stringify(err));
+	alert("Что-то пошло не так!\r\n Response:\n " + JSON.stringify(err));
 	myform.find("button").text("Отправить");
 	});
 	return false;
 	});
-	
+
 	// Document on load.
 	$(function(){
 		fullHeight();
