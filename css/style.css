@@ -5,7 +5,34 @@
 /*========================================================
                     Main layout styles
 =========================================================*/
+.back_img {
+  width: 100%;
+  height: 100%;
+  position: relactive;
+}
 
+.hotspot1 {
+  position: absolute;
+  z-index: 10;
+}
+
+.hotspot-icon {
+  color: white;
+  font-size: 2em;
+}
+
+.container1 {
+  display: none;
+  position: absolute;
+  font-family: 'Roboto';
+  font-size: 1em;
+  background-color: #FFFFFF;
+  padding: 10px 12px 10px;
+  height: 1em;
+  text-align: center;
+  border-radius: 1px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
+}
 body {
   background: #129894;
   color: #363535;
@@ -516,11 +543,13 @@ img {
     margin-left: 0;
   }
 }
+
 /*============  Boxes  =============*/
 .box_1 {
   text-align: center;
   padding-bottom: 30px;
 }
+
 .box_1 [class^='icon_'] {
   display: inline-block;
   width: 117px;
@@ -953,5 +982,6 @@ font-weight:bold;
    }
   </style>
  </head>
+
 
 /*Core variables and mixins*/

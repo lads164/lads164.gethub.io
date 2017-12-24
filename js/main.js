@@ -185,6 +185,53 @@
 	return false;
 	});
 
+	$(document).ready(function () {
+	$('.hotspot').on('mouseover',function (e) {
+  	toggleDescription(e.target.parentElement);
+  });
+
+  $('.hotspot').on('mouseout',function (e) {
+  	toggleDescription(e.target.parentElement);
+  });
+
+function toggleDescription (t) {
+	if((t != null && t !== undefined)) {
+  	var c = $('#' + t.id + '-desc');
+
+  	if (c.css('display') == 'none') {
+			c.css('left',t.offsetLeft + 'px');
+      c.css('top',t.offsetTop + t.offsetHeight + 10 + 'px');
+      c.css('display','block');
+    } else
+    	c.css('display','none');
+  }
+}
+
+});
+$(document).ready(function () {
+	$('.hotspot1').on('mouseover',function (e) {
+  	toggleDescription(e.target.parentElement);
+  });
+
+  $('.hotspot1').on('mouseout',function (e) {
+  	toggleDescription(e.target.parentElement);
+  });
+
+function toggleDescription (t) {
+	if((t != null && t !== undefined)) {
+  	var c = $('#' + t.id + '-desc');
+
+  	if (c.css('display') == 'none') {
+			c.css('left',t.offsetLeft + 'px');
+      c.css('top',t.offsetTop + t.offsetHeight + 10 + 'px');
+      c.css('display','block');
+    } else
+    	c.css('display','none');
+  }
+}
+
+});
+
 	// Document on load.
 	$(function(){
 		fullHeight();
