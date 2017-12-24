@@ -2430,7 +2430,7 @@ Copyright (c) 2014 Daniel Eden
     transform-origin: left bottom;
     -webkit-transform: rotate(0, 0, 1, 45deg);
     -ms-transform: rotate(0, 0, 1, 45deg);
-    transform: rotate(0, 0, 1, 45deg);
+  
     opacity: 0;
   }
 }
