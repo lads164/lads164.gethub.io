@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row wrap_11">
                 <div class="grid_12">
-                    <h2 class="header_2 indent_4">Студкарта</h2>
+                    <h2 class="header_2 indent_4" style="padding-top: 30px;">Студкарта</h2>
                 </div>
             </div>
         </div>
@@ -96,7 +96,30 @@ E-mail: <a href="#">anastasiafolomeeva@ya.ru</a>
                             </address>
                         </div>
                     </div>
+                    <div class="grid_6">
+                      <div class="wrap_18">
+                        <h2 class="header_2 indent_2">
+                          Отзывы и пожелания
+                        </h2>
 
+                        <form id="myform" method="post">
+                <label>Ваше имя</label>
+                <input type="text" name="Ваше имя" />
+                <label>Ваш отзыв или пожелание</label>
+                <input type="text" name="message_html" />
+                <br><br>
+                <button>
+                Отправить
+                </button>
+                </form>
+
+
+                <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script type="text/javascript">
+                (function(){
+                emailjs.init("user_TMB9O2N1UbyWBOt2vhxup");
+                })();
+                </script>
 
 
 
@@ -116,30 +139,7 @@ E-mail: <a href="#">anastasiafolomeeva@ya.ru</a>
         </script>
 
 
-        <div class="grid_6">
-          <div class="wrap_18">
-            <h2 class="header_2 indent_2">
-              Отзывы и пожелания
-            </h2>
 
-            <form id="myform" method="post">
-    <label>Ваше имя</label>
-    <input type="text" name="Ваше имя" />
-    <label>Ваш отзыв или пожелание</label>
-    <input type="text" name="message_html" />
-    <br><br>
-    <button>
-    Отправить
-    </button>
-    </form>
-
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function(){
-    emailjs.init("user_TMB9O2N1UbyWBOt2vhxup");
-    })();
-    </script>
 
     </section>
 </div>
